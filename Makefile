@@ -3,18 +3,18 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: myeow <myeow@student.42.fr>                +#+  +:+       +#+         #
+#    By: shatan <shatan@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2026/06/14 15:00:00 by myeow             #+#    #+#              #
-#    Updated: 2026/06/14 15:00:00 by myeow            ###   ########.fr        #
+#    Created: 2026/06/14 15:00:00 by shatan             #+#    #+#              #
+#    Updated: 2026/06/14 15:00:00 by shatan            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 all: up
 
 up:
-	@mkdir -p /home/myeow/data/wordpress
-	@mkdir -p /home/myeow/data/mariadb
+	@mkdir -p /home/shatan/data/wordpress
+	@mkdir -p /home/shatan/data/mariadb
 	@docker compose -f ./srcs/docker-compose.yml up -d --build
 
 down:
@@ -24,7 +24,7 @@ clean: down
 	@docker system prune -a --force
 
 fclean: clean
-	@sudo rm -rf /home/myeow/data
+	@sudo rm -rf /home/shatan/data
 
 re: fclean all
 

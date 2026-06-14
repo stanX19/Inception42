@@ -5,14 +5,14 @@ This document describes how to configure, build, and maintain the Inception infr
 ## Prerequisites
 - **Target OS**: Debian Bullseye (or Alpine Linux).
 - **Packages**: `docker-ce`, `docker-compose-plugin`, `make`, `git`, `curl`.
-- **System Access**: Sudo rights to write to `/home/myeow/data`.
+- **System Access**: Sudo rights to write to `/home/shatan/data`.
 
 ---
 
 ## Environment Setup & Secrets
 1. **Host mapping**: Define the server name route inside `/etc/hosts`:
    ```text
-   127.0.0.1 myeow.42.fr
+   127.0.0.1 shatan.42.fr
    ```
 2. **Environment Variables**: Configure secrets inside the `.env` file at `srcs/.env`. Make sure all WordPress usernames avoid containing "admin" or "administrator".
 
@@ -20,7 +20,7 @@ This document describes how to configure, build, and maintain the Inception infr
 
 ## Build and Lifecycle Commands
 Manage the stack using the root `Makefile`:
-* **Compile and build images**: `make` (equivalent to `make up`). This command creates the target folders `/home/myeow/data/wordpress` and `/home/myeow/data/mariadb`, builds all custom Dockerfiles, and runs the containers.
+* **Compile and build images**: `make` (equivalent to `make up`). This command creates the target folders `/home/shatan/data/wordpress` and `/home/shatan/data/mariadb`, builds all custom Dockerfiles, and runs the containers.
 * **Stop active containers**: `make down`.
 * **Prune unused build cache**: `make clean`.
 * **Perform hard reset**: `make fclean` (removes all saved volume folders and databases completely).
@@ -29,5 +29,5 @@ Manage the stack using the root `Makefile`:
 
 ## Persistent Data Directory
 Data persistence is configured using local driver-based Docker volumes. The persistent data resides inside the following paths on the host system:
-* **WordPress Website Files**: `/home/myeow/data/wordpress`
-* **MariaDB Database Files**: `/home/myeow/data/mariadb`
+* **WordPress Website Files**: `/home/shatan/data/wordpress`
+* **MariaDB Database Files**: `/home/shatan/data/mariadb`

@@ -2,7 +2,7 @@ server {
     listen 443 ssl;
     listen [::]:443 ssl;
 
-    server_name www.myeow.42.fr myeow.42.fr;
+    server_name www.shatan.42.fr shatan.42.fr;
 
     ssl_certificate here_certs;
     ssl_certificate_key /etc/ssl/private/nginx-selfsigned.key;

@@ -7,14 +7,14 @@ volumes:
     driver_opts:
       type: none
       o: bind
-      device: /home/myeow/data/wordpress
+      device: /home/shatan/data/wordpress
   mariadb:
     name: mariadb
     driver: local
     driver_opts:
       type: none
       o: bind
-      device: /home/myeow/data/mariadb
+      device: /home/shatan/data/mariadb
 
 networks:
   inception:

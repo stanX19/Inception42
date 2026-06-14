@@ -1,4 +1,4 @@
-_This project has been created as part of the 42 curriculum by myeow._
+_This project has been created as part of the 42 curriculum by shatan._
 
 # Inception - System Administration with Docker
 
@@ -48,10 +48,10 @@ The goal of this project is to set up a small, secure, containerized web infrast
 ### Prerequisites
 - Debian 11/12 or Alpine Linux host environment.
 - Docker Engine and Docker Compose (v2) installed.
-- Sudo/Root permissions to create directories in `/home/myeow/data`.
+- Sudo/Root permissions to create directories in `/home/shatan/data`.
 
 ### Execution
-1. Update your local hosts file on both the VM and Windows host to map `myeow.42.fr` to `127.0.0.1`.
+1. Update your local hosts file on both the VM and Windows host to map `shatan.42.fr` to `127.0.0.1`.
 2. Clean and run the build:
    ```bash
    make
