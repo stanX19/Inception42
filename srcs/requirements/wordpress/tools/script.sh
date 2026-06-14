@@ -29,6 +29,12 @@ sed -i -r "s/db1/$db_name/1"   wp-config.php
 sed -i -r "s/user/$db_user/1"  wp-config.php
 sed -i -r "s/pwd/$db_pwd/1"    wp-config.php
 
+# Wait for MariaDB to start up and listen on port 3306
+until bash -c 'cat < /dev/null > /dev/tcp/mariadb/3306' 2>/dev/null; do
+    echo "Waiting for MariaDB..."
+    sleep 3
+done
+
 wp core install --url=$DOMAIN_NAME/ --title=$WP_TITLE --admin_user=$WP_ADMIN_USR --admin_password=$WP_ADMIN_PWD --admin_email=$WP_ADMIN_EMAIL --skip-email --allow-root
 
 
