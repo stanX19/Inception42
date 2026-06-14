@@ -2,7 +2,7 @@
 
 
 
-service mysql start 
+service mariadb start 
 
 
 echo "CREATE DATABASE IF NOT EXISTS $db1_name ;" > db1.sql
@@ -13,6 +13,6 @@ echo "FLUSH PRIVILEGES;" >> db1.sql
 
 mysql < db1.sql
 
-kill $(cat /var/run/mysqld/mysqld.pid)
+service mariadb stop
 
 mysqld
